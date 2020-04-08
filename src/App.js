@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Navegacion from './components/navegacion';
+import TodoList from './components/TodoList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component {
+  render(){
+    return(
+      <div className="App">
+        <Navegacion />
+      <div className="container">
+      <div className="col-md-12">
+      <TodoList />
+      </div>
+        <div className="col-md-12 mt-4">
+          <div className="card-header alert alert-info">
+              Un simple Todo List
+            </div>
+            <div className="card-body">
+              <p>Añade tus tareas pendientes, y si has temrinado, dale un check </p>
+           </div>
+           
+        </div>
+      </div>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
